@@ -2256,6 +2256,8 @@ This typically indicates that your device does not have a healthy Internet conne
   position: relative;
   overflow: hidden;
   color: #fff;
+  font-family: ${({theme:e})=>e.contentFont};
+  line-height: 1.4rem;
 
   @media screen and (min-width: 414px) and (max-width: 930px) {
     margin: 0 20px 20px 0;
