@@ -30,7 +30,25 @@ const Main = styled.li`
   cursor: pointer;
   font-family: ${({ theme }) => theme.contentFont};
 
+  &:hover {
+    box-shadow: ${({ theme }) => theme.btnShadow};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.activeColor};
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 45%;
+    height: auto;
+    padding: 2rem;
+  }
+
   &:nth-child(3n) {
     margin: 10px 0 0 0;
+
+    @media screen and (max-width: 390px) {
+      margin: 10px 10px 0 0;
+    }
   }
 `;

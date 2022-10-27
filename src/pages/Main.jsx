@@ -13,7 +13,7 @@ const Main = () => {
         롤링페이퍼
       </h1>
       <div className='btnContainer'>
-        <Link to='/write'>
+        <Link to='/write' className='firstBtn'>
           <RandomBtn
             randomColor={randomColorsLeft[Math.floor(Math.random() * 3)]}
           >
@@ -44,10 +44,6 @@ const RandomBtn = styled.button`
   font-weight: 700;
   font-family: ${({ theme }) => theme.contentFont};
 
-  &:first-child {
-    margin-right: 20px;
-  }
-
   &:hover {
     box-shadow: ${({ theme }) => theme.btnShadow};
   }
@@ -72,6 +68,13 @@ const MainContainer = styled.div`
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.containerShadow};
 
+  @media screen and (max-width: 670px) {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0;
+  }
+
   h1 {
     font-size: 2rem;
     line-height: 38px;
@@ -83,5 +86,9 @@ const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .firstBtn {
+      margin-right: 20px;
+    }
   }
 `;

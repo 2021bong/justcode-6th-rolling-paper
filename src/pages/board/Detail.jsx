@@ -47,35 +47,37 @@ const Detail = () => {
       <Link to='/board'>
         <BsBackspaceFill size='1.5rem' className='back' />
       </Link>
-      <h1>{params}의 롤링페이퍼 ✉️</h1>
-      {list &&
-        (list.length !== 0 ? (
-          <ul className='messageContainer'>
-            {list.map((message) => {
-              return (
-                <MessageCard
-                  randomColor={
-                    randomColors[
-                      Math.floor(Math.random() * randomColors.length)
-                    ]
-                  }
-                  key={message[0]}
-                >
-                  <span className='message'>{message[1]}</span>
-                  <span className='writer'>- {message[0]} -</span>
-                </MessageCard>
-              );
-            })}
-          </ul>
-        ) : (
-          <p className='noCard'>
-            아직
-            <br />
-            작성된 롤링페이퍼가
-            <br />
-            없어요 🥲
-          </p>
-        ))}
+      <div className='contentContainer'>
+        <h1>{params}의 롤링페이퍼 ✉️</h1>
+        {list &&
+          (list.length !== 0 ? (
+            <ul className='messageContainer'>
+              {list.map((message) => {
+                return (
+                  <MessageCard
+                    randomColor={
+                      randomColors[
+                        Math.floor(Math.random() * randomColors.length)
+                      ]
+                    }
+                    key={message[0]}
+                  >
+                    <span className='message'>{message[1]}</span>
+                    <span className='writer'>- {message[0]} -</span>
+                  </MessageCard>
+                );
+              })}
+            </ul>
+          ) : (
+            <p className='noCard'>
+              아직
+              <br />
+              작성된 롤링페이퍼가
+              <br />
+              없어요 🥲
+            </p>
+          ))}
+      </div>
     </Main>
   );
 };
@@ -99,6 +101,14 @@ const MessageCard = styled.li`
   overflow: hidden;
   color: #fff;
 
+  @media screen and (min-width: 414px) and (max-width: 930px) {
+    margin: 0 20px 20px 0;
+  }
+
+  @media screen and (max-width: 414px) {
+    margin: 0 0 20px 0;
+  }
+
   &:before {
     position: absolute;
     content: '';
@@ -112,6 +122,14 @@ const MessageCard = styled.li`
 
   &:nth-child(3n) {
     margin: 0 0 20px 0;
+
+    @media screen and (min-width: 930px) and (max-width: 1240px) {
+      margin: 0 20px 20px 0;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 930px) {
+      margin: 0 20px 20px 0;
+    }
   }
 
   .writer {
@@ -130,6 +148,21 @@ const Main = styled.div`
   position: relative;
   width: 70%;
   margin: 200px auto;
+  padding: 30px;
+
+  @media screen and (min-width: 414px) and (max-width: 930px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 50px auto;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   .back {
     position: absolute;
@@ -137,6 +170,12 @@ const Main = styled.div`
     top: 0;
     color: #aaa;
     cursor: pointer;
+
+    @media screen and (max-width: 414px) {
+      top: 1%;
+      left: 1%;
+    }
+
     &:hover {
       color: #555;
     }
@@ -146,30 +185,42 @@ const Main = styled.div`
     }
   }
 
-  h1 {
-    font-family: ${({ theme }) => theme.titleFont};
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .messageContainer {
-    width: 100%;
+  .contentContainer {
     display: flex;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .noCard {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    min-width: 15rem;
-    min-height: 15rem;
-    background-color: #eee;
-    line-height: 1.2rem;
-    text-align: center;
-    font-family: ${({ theme }) => theme.contentFont};
+
+    h1 {
+      font-family: ${({ theme }) => theme.titleFont};
+      font-size: 2rem;
+      line-height: 2.2rem;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 414px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .messageContainer {
+      width: 100%;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .noCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      min-width: 15rem;
+      min-height: 15rem;
+      background-color: #eee;
+      line-height: 1.2rem;
+      text-align: center;
+      font-family: ${({ theme }) => theme.contentFont};
+    }
   }
 `;

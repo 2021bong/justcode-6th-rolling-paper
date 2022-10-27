@@ -142,7 +142,25 @@ const Main = styled.div`
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.containerShadow};
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0 auto;
+
+    .desc {
+      width: 75%;
+      text-align: center;
+      line-height: 1rem;
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+    margin: 50px auto;
+  }
+
   .back {
+    z-index: 1;
     position: absolute;
     left: 3%;
     top: 3%;
@@ -161,7 +179,6 @@ const Main = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,10 +205,10 @@ const Main = styled.div`
       border: none;
       padding: 5px;
       border-radius: 5px;
+      font-family: ${({ theme }) => theme.contentFont};
     }
 
-    input,
-    option {
+    input {
       border: none;
       padding: 5px 5px;
       border-radius: 5px;
