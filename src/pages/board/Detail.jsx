@@ -100,6 +100,8 @@ const MessageCard = styled.li`
   position: relative;
   overflow: hidden;
   color: #fff;
+  font-family: ${({ theme }) => theme.contentFont};
+  line-height: 1.4rem;
 
   @media screen and (min-width: 414px) and (max-width: 930px) {
     margin: 0 20px 20px 0;
