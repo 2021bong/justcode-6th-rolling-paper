@@ -9,7 +9,7 @@ import Detail from './pages/board/Detail';
 
 const Router = () => {
   return (
-    <HashRouter>
+    <HashRouter basename='/justcode-6th-rolling-paper'>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Routes>
