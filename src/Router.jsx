@@ -3,6 +3,8 @@ import Main from './pages/Main';
 import GlobalStyle from './styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import * as theme from './styles/theme';
+import Board from './pages/board/Board';
+import Write from './pages/write/Write';
 
 const Router = () => {
   return (
@@ -11,6 +13,8 @@ const Router = () => {
         <GlobalStyle />
         <Routes>
           <Route path='/' element={<Main />} />
+          <Route path='/write' element={<Write />} />
+          <Route path='/board' element={<Board />} />
         </Routes>
       </ThemeProvider>
     </HashRouter>

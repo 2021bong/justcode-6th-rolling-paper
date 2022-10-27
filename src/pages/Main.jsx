@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { randomColorsLeft, randomColorsRight } from '../utils/color';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -12,16 +13,20 @@ const Main = () => {
         롤링페이퍼
       </h1>
       <div className='btnContainer'>
-        <RandomBtn
-          randomColor={randomColorsLeft[Math.floor(Math.random() * 3)]}
-        >
-          롤링페이서 쓰러가기
-        </RandomBtn>
-        <RandomBtn
-          randomColor={randomColorsRight[Math.floor(Math.random() * 3)]}
-        >
-          롤링페이퍼 구경가기
-        </RandomBtn>
+        <Link to='/write'>
+          <RandomBtn
+            randomColor={randomColorsLeft[Math.floor(Math.random() * 3)]}
+          >
+            롤링페이서 쓰러가기
+          </RandomBtn>
+        </Link>
+        <Link to='/board'>
+          <RandomBtn
+            randomColor={randomColorsRight[Math.floor(Math.random() * 3)]}
+          >
+            롤링페이퍼 구경가기
+          </RandomBtn>
+        </Link>
       </div>
     </MainContainer>
   );
@@ -44,12 +49,12 @@ const RandomBtn = styled.button`
   }
 
   &:hover {
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: ${({ theme }) => theme.btnShadow};
   }
 
   &:active {
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
-    background-color: #333;
+    box-shadow: ${({ theme }) => theme.btnShadow};
+    background-color: ${({ theme }) => theme.activeColor};
   }
 `;
 
@@ -61,9 +66,11 @@ const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: 25% 50%/130% no-repeat
-    url('https://cdn.pixabay.com/photo/2016/02/19/10/59/art-1209519_1280.jpg');
+  background: 25% 50%/140% no-repeat
+    url('http://cdn.designbeep.com/wp-content/uploads/2013/04/2.lined-paper-texture.jpg');
   font-family: ${({ theme }) => theme.titleFont};
+  border-radius: 10px;
+  box-shadow: ${({ theme }) => theme.containerShadow};
 
   h1 {
     font-size: 33px;
