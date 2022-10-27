@@ -17,7 +17,7 @@ const Main = () => {
           <RandomBtn
             randomColor={randomColorsLeft[Math.floor(Math.random() * 3)]}
           >
-            롤링페이서 쓰러가기
+            롤링페이퍼 쓰러가기
           </RandomBtn>
         </Link>
         <Link to='/board'>
@@ -66,8 +66,8 @@ const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: 25% 50%/140% no-repeat
-    url('http://cdn.designbeep.com/wp-content/uploads/2013/04/2.lined-paper-texture.jpg');
+  background: center/100% no-repeat
+    url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fnw9OU%2FbtrPK1178su%2FUtteCLsoo44E4fUAHOCUsk%2Fimg.jpg');
   font-family: ${({ theme }) => theme.titleFont};
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.containerShadow};
