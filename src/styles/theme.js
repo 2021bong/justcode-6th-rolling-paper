@@ -1,3 +1,3 @@
-export const conetentFont = 'KOTRAHOPE';
+export const contentFont = 'IM_Hyemin-Bold, sans-serif';
 
-export const titleFont = 'KOTRA_BOLD-Bold';
+export const titleFont = 'Cafe24Ssurround, sans-serif';

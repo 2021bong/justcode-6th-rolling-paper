@@ -5,23 +5,27 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
 
   @font-face {
-    font-family: 'KOTRAHOPE';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'KOTRA_BOLD-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+  }
 
   * {
   box-sizing: border-box;
   }
-  
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 700;
+  }
+
   ul, ol, li {
     list-style: none;
   }
