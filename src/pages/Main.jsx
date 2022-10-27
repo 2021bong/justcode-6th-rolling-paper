@@ -66,7 +66,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: center/100% no-repeat
+  background: center/105% no-repeat
     url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fnw9OU%2FbtrPK1178su%2FUtteCLsoo44E4fUAHOCUsk%2Fimg.jpg');
   font-family: ${({ theme }) => theme.titleFont};
   border-radius: 10px;
