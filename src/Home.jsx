@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { randomColorsLeft, randomColorsRight } from '../utils/color';
+import { randomColorsLeft, randomColorsRight } from './utils/color';
 import { Link } from 'react-router-dom';
 
-const Main = () => {
+const Home = () => {
   return (
     <MainContainer>
       <h1>
@@ -32,7 +32,7 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
 
 const RandomBtn = styled.button`
   padding: 10px;
