@@ -73,7 +73,7 @@ const MainContainer = styled.div`
   box-shadow: ${({ theme }) => theme.containerShadow};
 
   h1 {
-    font-size: 33px;
+    font-size: 2rem;
     line-height: 38px;
     text-align: center;
     margin-bottom: 50px;

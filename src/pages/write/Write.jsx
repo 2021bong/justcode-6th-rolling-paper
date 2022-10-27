@@ -3,12 +3,15 @@ import { names } from '../../utils/name';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { randomColors } from '../../utils/color';
+import { AiFillHome } from 'react-icons/ai';
 
 const Write = () => {
   const [myName, setMyname] = useState('');
   const [who, setWho] = useState('김충만');
   const [letterValue, setLetterValue] = useState('');
-  const [color] = useState(randomColors[Math.floor(Math.random() * 6)]);
+  const [color] = useState(
+    randomColors[Math.floor(Math.random() * randomColors.length)]
+  );
 
   const handleWhoToLetter = (e) => {
     setWho(e.target.value);
@@ -24,6 +27,9 @@ const Write = () => {
 
   return (
     <Main>
+      <Link to='/'>
+        <AiFillHome className='back' size='1.5rem' />
+      </Link>
       <form className='formContainer' onSubmit={(e) => e.preventDefault()}>
         <div className='inputContainer'>
           <label htmlFor='who'>롤링페이퍼 받을 사람은 </label>
@@ -102,7 +108,23 @@ const Main = styled.div`
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.containerShadow};
 
+  .back {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    color: #aaa;
+    cursor: pointer;
+    &:hover {
+      color: #555;
+    }
+
+    &:active {
+      color: ${({ theme }) => theme.activeColor};
+    }
+  }
+
   .formContainer {
+    position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;

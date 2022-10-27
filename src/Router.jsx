@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import * as theme from './styles/theme';
 import Board from './pages/board/Board';
 import Write from './pages/write/Write';
+import Detail from './pages/board/Detail';
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
           <Route path='/' element={<Main />} />
           <Route path='/write' element={<Write />} />
           <Route path='/board' element={<Board />} />
+          <Route path='/board/:name' element={<Detail />} />
         </Routes>
       </ThemeProvider>
     </HashRouter>
