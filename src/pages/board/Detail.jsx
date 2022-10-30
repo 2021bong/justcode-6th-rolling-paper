@@ -89,8 +89,8 @@ const MessageCard = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-basis: 0;
   width: 16rem;
-  height: auto;
   min-width: 15rem;
   min-height: 15rem;
   margin: 0 20px 20px 0;
@@ -120,18 +120,6 @@ const MessageCard = styled.li`
     left: 0;
     opacity: 0.2;
     background-image: url('https://kmug.co.kr/data/file/design/data_image_301181594_11135ff1c7_o_ybde.jpg');
-  }
-
-  &:nth-child(3n) {
-    margin: 0 0 20px 0;
-
-    @media screen and (min-width: 930px) and (max-width: 1240px) {
-      margin: 0 20px 20px 0;
-    }
-
-    @media screen and (min-width: 414px) and (max-width: 930px) {
-      margin: 0 20px 20px 0;
-    }
   }
 
   .writer {
@@ -210,6 +198,7 @@ const Main = styled.div`
       width: 100%;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: flex-start;
     }
 
     .noCard {
