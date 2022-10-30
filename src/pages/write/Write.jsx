@@ -138,7 +138,7 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXXSj%2FbtrPI6pYN7V%2FtvBCf7Y0FvKN1eqe4Ua700%2Fimg.png');
+  background-image: url('https://img.freepik.com/free-photo/white-crumpled-paper-background-simple-diy-craft_53876-128183.jpg?w=1380&t=st=1667143321~exp=1667143921~hmac=da8f86406a3e9c54696e02d2f63e2e57d276a6d5c9017f6ca9d3a86ea3da0762');
   border-radius: 10px;
   box-shadow: ${({ theme }) => theme.containerShadow};
 
