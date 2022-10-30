@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import * as theme from './styles/theme';
+
 import Home from './Home';
 import Board from './pages/board/Board';
 import Write from './pages/write/Write';

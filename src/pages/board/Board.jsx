@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { names } from '../../utils/name';
-import NameCard from './NameCard';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+import NameCard from './NameCard';
+import { names } from '../../utils/name';
 
 const Board = () => {
   const navigator = useNavigate();
