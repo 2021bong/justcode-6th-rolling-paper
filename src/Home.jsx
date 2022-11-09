@@ -15,14 +15,22 @@ const Home = () => {
       <div className='btnContainer'>
         <Link to='/write' className='firstBtn'>
           <RandomBtn
-            randomColor={randomColorsLeft[Math.floor(Math.random() * 3)]}
+            randomColor={
+              randomColorsLeft[
+                Math.floor(Math.random() * randomColorsLeft.length)
+              ]
+            }
           >
             롤링페이퍼 쓰러가기
           </RandomBtn>
         </Link>
         <Link to='/board'>
           <RandomBtn
-            randomColor={randomColorsRight[Math.floor(Math.random() * 3)]}
+            randomColor={
+              randomColorsRight[
+                Math.floor(Math.random() * randomColorsRight.length)
+              ]
+            }
           >
             롤링페이퍼 구경가기
           </RandomBtn>
