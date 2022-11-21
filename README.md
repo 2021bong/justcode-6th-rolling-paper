@@ -107,6 +107,14 @@ npm run dev
 ```
 
 <br />
+
+4. 해당 주소에서 프로젝트를 확인할 수 있습니다.
+
+```
+http://localhost:5173/justcode-6th-rollling-paper/
+```
+
+<br />
 <br />
 
 ---
