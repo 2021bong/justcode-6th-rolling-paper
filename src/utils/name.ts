@@ -1,4 +1,4 @@
-export const names = [
+const NAMES = [
   '구현',
   '김충만',
   '김교은',
@@ -42,3 +42,5 @@ export const names = [
   '전하은',
   '조재준',
 ];
+
+export default NAMES;

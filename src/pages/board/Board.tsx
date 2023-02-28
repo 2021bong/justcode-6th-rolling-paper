@@ -1,15 +1,17 @@
+import { MouseEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import styled from 'styled-components';
 
 import NameCard from './NameCard';
-import { names } from '../../utils/name';
+import NAMES from '../../utils/name';
 
 const Board = () => {
   const navigator = useNavigate();
 
-  const handleMoveDetail = (e) => {
-    navigator(`/board/${e.target.textContent}`);
+  const handleMoveDetail = (e: MouseEvent) => {
+    const target = e.target as HTMLLIElement;
+    navigator(`/board/${target.textContent}`);
   };
 
   return (
@@ -21,7 +23,7 @@ const Board = () => {
         <h1>누구의 롤링페이퍼를 볼까? 🤔</h1>
         <div className='cardContainer'>
           <ul className='alignContainer'>
-            {names.map((name) => {
+            {NAMES.map((name) => {
               return (
                 <NameCard
                   className='card'

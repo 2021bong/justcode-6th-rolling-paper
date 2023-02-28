@@ -12,7 +12,8 @@ export const MessageCard = styled.li`
   margin: 0 20px 20px 0;
   padding: 30px;
   border-radius: 10px;
-  background-color: ${({ randomColor }) => randomColor};
+  background-color: ${({ randomColor }: { randomColor: string }) =>
+    randomColor};
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -53,7 +54,7 @@ export const Main = styled.div`
   align-items: center;
   position: relative;
   width: 70%;
-  margin: 200px auto;
+  margin: 100px auto;
   padding: 30px;
 
   @media screen and (min-width: 414px) and (max-width: 930px) {

@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { AiFillHome } from 'react-icons/ai';
 
-import { names } from '../../utils/name';
+import NAMES from '../../utils/name';
 import { randomColors } from '../../utils/color';
 import { RandomBtn, Main } from './Write.style';
 
@@ -18,15 +18,15 @@ const Write = () => {
 
   const navigator = useNavigate();
 
-  const handleWhoToLetter = (e) => {
+  const handleWhoToLetter = (e: ChangeEvent<HTMLSelectElement>) => {
     setWho(e.target.value);
   };
 
-  const handleMyName = (e) => {
+  const handleMyName = (e: ChangeEvent<HTMLInputElement>) => {
     setMyname(e.target.value);
   };
 
-  const handleWrite = (e) => {
+  const handleWrite = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setLetterValue(e.target.value);
   };
 
@@ -66,7 +66,7 @@ const Write = () => {
         <div className='inputContainer'>
           <label htmlFor='who'>롤링페이퍼 받을 사람은 </label>
           <select name='who' id='who' onChange={handleWhoToLetter}>
-            {names.map((name) => (
+            {NAMES.map((name) => (
               <option key={name} value={name}>
                 {name}
               </option>
