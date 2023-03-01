@@ -1,7 +1,14 @@
+import { MouseEvent } from 'react';
 import styled from 'styled-components';
 import { randomColors } from '../../utils/color';
 
-const NameCard = ({ name, handleMoveDetail }) => {
+interface NameCardProps {
+  className: string;
+  name: string;
+  handleMoveDetail: (e: MouseEvent) => void;
+}
+
+const NameCard = ({ name, handleMoveDetail }: NameCardProps) => {
   return (
     <Main
       randomColor={
@@ -22,7 +29,8 @@ const Main = styled.li`
   margin: 10px 10px 0 0;
   padding: 20px;
   border-radius: 10px;
-  background-color: ${({ randomColor }) => randomColor};
+  background-color: ${({ randomColor }: { randomColor: string }) =>
+    randomColor};
   font-weight: 700;
   font-size: 1rem;
   text-align: center;

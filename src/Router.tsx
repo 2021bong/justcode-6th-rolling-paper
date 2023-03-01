@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import * as theme from './styles/theme';
@@ -10,7 +10,7 @@ import Detail from './pages/board/Detail';
 
 const Router = () => {
   return (
-    <HashRouter>
+    <BrowserRouter basename='/justcode-6th-rolling-paper'>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Routes>
@@ -20,7 +20,7 @@ const Router = () => {
           <Route path='/board/:name' element={<Detail />} />
         </Routes>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

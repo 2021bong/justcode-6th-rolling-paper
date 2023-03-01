@@ -47,7 +47,8 @@ const RandomBtn = styled.button`
   border: none;
   border-radius: 5px;
   color: #fff;
-  background-color: ${({ randomColor }) => randomColor};
+  background-color: ${({ randomColor }: { randomColor: string }) =>
+    randomColor};
   cursor: pointer;
   font-weight: 700;
   font-family: ${({ theme }) => theme.contentFont};

@@ -9,7 +9,7 @@ import { MessageCard, Main } from './Detail.style';
 
 const Detail = () => {
   const params = useParams().name;
-  const [list, setList] = useState();
+  const [list, setList] = useState<[string, any][] | [] | undefined>();
 
   useEffect(() => {
     const loadData = async () => {
@@ -24,17 +24,10 @@ const Detail = () => {
       };
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
-      const docRef = doc(db, 'rolling-paper', params);
+      const docRef = doc(db, 'rolling-paper', !!params ? params : '홍길동');
       const letters = await getDoc(docRef);
-      if (letters._document.data.value.mapValue.fields !== undefined) {
-        let dataList = Object.entries(
-          letters._document.data.value.mapValue.fields
-        );
-        dataList = dataList.map((message) => {
-          return message.map((el, i) => {
-            return i === 1 ? el.stringValue : el;
-          });
-        });
+      if (letters.exists()) {
+        let dataList: [string, any][] = Object.entries(letters.data());
         setList(dataList);
       } else {
         setList([]);

@@ -33,44 +33,43 @@ JUSTCODE 6기를 위한 롤링 페이퍼 토이 프로젝트입니다.
 <img src="https://img.shields.io/badge/Vite-646CFF??style=flat&logo=vite&logoColor=white"/>
 <br />
 <img src="https://img.shields.io/badge/React.js-61DAFB??style=flat&logo=react&logoColor=white"/>
-<img src="https://img.shields.io/badge/React router dom-61DAFB??style=flat&logo=react&logoColor=white"/>
-<img src="https://img.shields.io/badge/React icons-61DAFB??style=flat&logo=react&logoColor=white"/>
+<img src="https://img.shields.io/badge/Typescript-3178C6??style=flat&logo=typescript&logoColor=white"/>
 <br />
-<img src="https://img.shields.io/badge/Styled components-DB7093??style=flat&logo=styledcomponents&logoColor=white"/>
 <img src="https://img.shields.io/badge/Firebase-FFCA28??style=flat&logo=firebase&logoColor=white"/>
 <img src="https://img.shields.io/badge/Git-F05032??style=flat&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub pages-222222??style=flat&logo=github pages&logoColor=white"/>
 
 <br />
 
 ```
 ├── .env
 ├── .gitignore
+├── README.md
 ├── index.html
 ├── package-lock.json
 ├── package.json
 ├── public
 │   └── letter.svg
 ├── src
-│   ├── Home.jsx
-│   ├── Router.jsx
-│   ├── main.jsx
+│   ├── Home.tsx
+│   ├── Router.tsx
+│   ├── main.tsx
 │   ├── pages
 │   │   ├── board
-│   │   │   ├── Board.jsx
-│   │   │   ├── Detail.jsx
-│   │   │   ├── Detail.style.js
-│   │   │   └── NameCard.jsx
+│   │   │   ├── Board.tsx
+│   │   │   ├── Detail.style.ts
+│   │   │   ├── Detail.tsx
+│   │   │   └── NameCard.tsx
 │   │   └── write
-│   │       ├── Write.jsx
-│   │       └── Write.style.js
+│   │       ├── Write.style.ts
+│   │       └── Write.tsx
 │   ├── styles
-│   │   ├── GlobalStyle.js
-│   │   └── theme.js
+│   │   ├── GlobalStyle.ts
+│   │   └── theme.ts
 │   └── utils
-│       ├── color.js
-│       └── name.js
-├── README.md
+│       ├── color.ts
+│       └── name.ts
+├── tsconfig.json
+├── tsconfig.node.json
 └── vite.config.js
 ```
 
