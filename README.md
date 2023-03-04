@@ -31,12 +31,9 @@ JUSTCODE 6기를 위한 롤링 페이퍼 토이 프로젝트입니다.
 <br />
 
 <img src="https://img.shields.io/badge/Vite-646CFF??style=flat&logo=vite&logoColor=white"/>
-<br />
 <img src="https://img.shields.io/badge/React.js-61DAFB??style=flat&logo=react&logoColor=white"/>
 <img src="https://img.shields.io/badge/Typescript-3178C6??style=flat&logo=typescript&logoColor=white"/>
-<br />
 <img src="https://img.shields.io/badge/Firebase-FFCA28??style=flat&logo=firebase&logoColor=white"/>
-<img src="https://img.shields.io/badge/Git-F05032??style=flat&logo=git&logoColor=white"/>
 
 <br />
 

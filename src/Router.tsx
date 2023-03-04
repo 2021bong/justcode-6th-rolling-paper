@@ -10,7 +10,7 @@ import Detail from './pages/board/Detail';
 
 const Router = () => {
   return (
-    <BrowserRouter basename='/justcode-6th-rolling-paper'>
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Routes>
