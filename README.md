@@ -14,7 +14,7 @@ JUSTCODE 6기를 위한 롤링 페이퍼 토이 프로젝트입니다.
 
 <br />
 
-## [⭐️모두에게 롤링페이퍼 쓰러 가기](https://2021bong.github.io/justcode-6th-rolling-paper/)
+## [⭐️모두에게 롤링페이퍼 쓰러 가기](https://justcode-6th-rolling-paper.vercel.app/)
 
 <br />
 <br />
